@@ -1,0 +1,15 @@
+#build mainframe
+#build drydock
+
+GET Titanium/Core Alloy 
+MINE Titanium/Core Alloy v.1
+FOR Titanium/Core = TC$
+
+# the lines above do not list storage and supply, which are separate
+{SUM TC$ n! = TCS$ (n-1)}
+{SUM TC$ (n-1) = WT$ WHERE WT$ = n-2}
+
+APPLY SATNAV v.1 PS
+END PROG MAINFRAME
+
+STARTCLONE ssN
